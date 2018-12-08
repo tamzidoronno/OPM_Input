@@ -1,0 +1,49 @@
+<?php 
+class mdCrypt{
+    private $key;
+    private $ivlen;
+    private $iv;
+    private $options;
+    private $cipher="AES-128-CBC";
+    
+    public function __construct($key='',$iv=''){
+        if($key)
+            $this->key      = $key;
+        else
+            $this->key      = md5(substr(sha1(rand()), 2, 10));
+        $this->options  = OPENSSL_RAW_DATA;
+        $this->cipher   = "AES-128-CBC";
+        $this->ivlen    = openssl_cipher_iv_length($this->cipher);
+        $this->iv       = openssl_random_pseudo_bytes($this->ivlen);       
+    }
+    
+    public function encrypt($text=''){
+        $ciphertext_raw = openssl_encrypt($text, $this->cipher, $this->key, $this->options, $this->iv);
+        $hmac = hash_hmac('sha256', $ciphertext_raw, $this->key, $as_binary=true);
+        $ciphertext = base64_encode( $this->iv.$hmac.$ciphertext_raw );
+        
+        return $ciphertext;
+    }
+    
+    public function decrypt($text,$key=''){
+        
+        if(!$key)
+            $key=$this->key;
+       
+        
+        $c = base64_decode($text);
+        $iv = substr($c, 0, $this->ivlen);
+        $hmac = substr($c, $this->ivlen, $sha2len=32);
+
+        $ciphertext_raw = substr($c, $this->ivlen+$sha2len);
+        $original_plaintext = openssl_decrypt($ciphertext_raw, $this->cipher, $key, $this->options, $iv);
+        
+        return $original_plaintext;
+        
+    }
+    public function setKey($key=''){
+        if($key)
+            $this->key = $key;
+    }
+}
+?>

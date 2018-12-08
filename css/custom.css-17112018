@@ -1,0 +1,61 @@
+.box-header .header-icon{
+    float: right;
+    margin-top: 1px;
+}
+.box-header .header-icon a {
+    margin: 0 5px;
+	color:#fff;
+	text-decoration:none;
+}
+.form-horizontal .control-group{
+	max-width: 1060px;
+	width: 100%;
+}
+.form-horizontal .controls{
+	max-width:calc(100% - 200px);
+}
+.table-responsive{
+	max-width:100%;
+	overflow-x:auto;
+}
+.addBtn{
+	text-align:right;
+	padding-right:20px;
+	cursor:pointer;
+}
+.removeRow{
+	color:#f00;
+	cursor:pointer;
+}
+#education input[type="text"]{
+	/*max-width:40px;*/
+	width:auto;
+}
+.box-content .controls {
+	width: 100% !important;
+	position: relative;
+	float: left;
+	margin-left: 0;
+	max-width: 100%;
+}
+.controls .addBtn {
+	text-align: center;
+	padding-right: 0;
+	position: absolute;
+	right: -17px;
+	bottom: 30px;
+}
+.form-horizontal .control-label {
+	float: left;
+	width: 100%;
+	padding-top: 5px;
+	text-align: left;
+}
+.table-responsive {
+	width: 100%;
+}
+.table-responsive table .input-xlarge, .table-responsive table input {
+	width: 88% !important;
+	box-shadow: inherit;
+	border: none;
+}

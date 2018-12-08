@@ -1,0 +1,5 @@
+[13-Nov-2018 08:03:31 UTC] PHP Warning:  openssl_encrypt() expects at most 5 parameters, 6 given in /home/thelivedemo/public_html/php/officersprofile/class/example.php on line 38
+[13-Nov-2018 08:03:31 UTC] PHP Warning:  openssl_decrypt() expects at most 5 parameters, 6 given in /home/thelivedemo/public_html/php/officersprofile/class/example.php on line 40
+[13-Nov-2018 08:08:18 UTC] PHP Parse error:  syntax error, unexpected '$plaintext' (T_VARIABLE), expecting ',' or ';' in /home/thelivedemo/public_html/php/officersprofile/class/example.php on line 34
+[13-Nov-2018 09:12:14 UTC] PHP Parse error:  syntax error, unexpected '"<br>"' (T_CONSTANT_ENCAPSED_STRING) in /home/thelivedemo/public_html/php/officersprofile/class/example.php on line 62
+[13-Nov-2018 09:31:01 UTC] PHP Parse error:  syntax error, unexpected '$plaintext' (T_VARIABLE) in /home/thelivedemo/public_html/php/officersprofile/class/example.php on line 51

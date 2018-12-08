@@ -1,0 +1,16 @@
+jQuery(document).ready(function(){
+	jQuery('input[rel="phone"]').keypress(function (e){
+	  var charCode = (e.which) ? e.which : e.keyCode;
+	  //console.log(charCode);
+	  if (charCode > 31 && (charCode < 43 || charCode > 57)) {
+		  //alert('');
+		  return false;
+	  }
+	});
+	
+	if(jQuery( ".client-list #keyword").length > 0){
+		jQuery( ".client-list #keyword" ).autocomplete({
+		  source: searchKeyword
+		});
+	}
+});
