@@ -429,6 +429,7 @@ if(isset($_POST['submit'])){
                                                             <th>Result</th>
                                                             <th>Year Of <br>Participation</th>
                                                             <th>Remarks</th>
+                                                            <th>Certificate</th>
                                                             
                                                         </tr>
                                                     </thead>
@@ -448,6 +449,9 @@ if(isset($_POST['submit'])){
                                                             </td>
                                                             <td>
                                                                 <input type="text" name="Remarks_SQ[]">
+                                                            </td>
+                                                            <td>
+                                                                <input type="file" name="Certificate_File[]">
                                                             </td>
                                                            
                                                         </tr>
@@ -472,6 +476,7 @@ if(isset($_POST['submit'])){
                                                             <th>Abstract</th>
                                                             <th>Year Of <br>Passing</th>
                                                             <th>Remarks</th>
+                                                            <th>Paper</th>
                                                            
                                                         </tr>
                                                     </thead>
@@ -491,6 +496,9 @@ if(isset($_POST['submit'])){
                                                             </td>
                                                             <td>
                                                                 <input type="text" name="Remarks_PP[]">
+                                                            </td>
+                                                            <td>
+                                                                <input type="file" name="Paper_File[]">
                                                             </td>
                                                             
                                                         </tr>
